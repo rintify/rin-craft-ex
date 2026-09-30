@@ -1,0 +1,192 @@
+.presence {
+  opacity: 0;
+  translate: 0 5px;
+  transition:
+    opacity var(--duration) var(--ease),
+    translate var(--duration) var(--ease);
+}
+.presence[data-visible="true"] {
+  opacity: 1;
+  translate: 0 0;
+}
+.morph {
+  position: relative;
+  min-width: 0;
+}
+.motion-ghost {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none !important;
+  user-select: none;
+  z-index: 1;
+}
+.modal-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #3b352500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  backdrop-filter: blur(0px);
+  transition:
+    background var(--duration) var(--ease),
+    backdrop-filter var(--duration) var(--ease);
+}
+.modal-layer[data-visible="true"] {
+  background: #3b352539;
+  backdrop-filter: blur(5px);
+}
+.dialog {
+  width: min(100%, 480px);
+  max-height: 88dvh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #fffefa;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow:
+    0 24px 100px #3b352529,
+    0 4px 16px #3b35250a;
+  outline: 0;
+  opacity: 0;
+  transform: translateY(22px) scale(0.98);
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+  overflow: hidden;
+}
+.modal-layer[data-visible="true"] .dialog {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.dialog-heading {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 22px 15px;
+  border-bottom: 1px solid var(--line);
+}
+.dialog-heading h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+.dialog-heading .icon-button {
+  border: 0;
+  background: var(--field);
+  border-radius: 50%;
+  width: 34px;
+  min-height: 34px;
+  color: var(--muted);
+}
+.dialog-body {
+  overflow: auto;
+  overscroll-behavior: contain;
+  min-height: 0;
+  scrollbar-width: thin;
+}
+.select-popup {
+  position: fixed;
+  z-index: 120;
+  background: var(--surface);
+  border: 1px solid #dfdacf;
+  border-radius: 10px;
+  box-shadow:
+    0 12px 36px #51412b1f,
+    0 2px 5px #51412b08;
+  overflow: auto;
+  padding: 4px;
+  overscroll-behavior: contain;
+  opacity: 0;
+  transform: translateY(-5px) scale(0.98);
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+}
+.select-popup[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 12px;
+  padding: 9px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition:
+    background 120ms,
+    color 120ms;
+}
+.select-option > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.select-option.highlighted {
+  background: var(--field);
+}
+.select-option[aria-selected="true"] {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+.select-option svg {
+  transition: opacity var(--duration);
+}
+.tooltip {
+  position: fixed;
+  z-index: 160;
+  max-width: min(240px, 90vw);
+  padding: 8px 10px;
+  border-radius: 7px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-float);
+  color: var(--ink);
+  font-size: 10px;
+  line-height: 1.5;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-3px);
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease);
+}
+.tooltip[data-visible="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(92vw, 600px);
+  background: var(--surface);
+  border: 1px solid #d6cbb9;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 24px #3b35251a;
+  z-index: 140;
+  font-size: 12px;
+  width: max-content;
+  pointer-events: none;
+}
+.toast::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+}

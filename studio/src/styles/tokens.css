@@ -1,0 +1,71 @@
+:root {
+  color-scheme: light;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  color: #34332f;
+  background: #f7f6f2;
+  font-synthesis: none;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  --surface: #fffefa;
+  --canvas: #f0eee8;
+  --ink: #34332f;
+  --muted: #777167;
+  --line: #e6e3dc;
+  --line-strong: #d3cfc6;
+  --accent: #c94d35;
+  --accent-hover: #b4402b;
+  --accent-soft: #f7eae3;
+  --field: #f5f4ef;
+  --duration: 240ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --shadow-float: 0 3px 12px #49402b08, 0 1px 2px #49402b06;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+svg {
+  flex-shrink: 0;
+}
+button,
+a,
+input,
+textarea,
+[role="button"],
+[role="option"] {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+::selection {
+  background: #edc8b9;
+  color: #372f28;
+}
+button:focus-visible,
+[role="button"]:focus-visible,
+a:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+input[hidden] {
+  display: none;
+}
+.eyebrow {
+  color: var(--muted);
+  font: 9px var(--mono);
+  letter-spacing: 0.12em;
+}

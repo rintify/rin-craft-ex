@@ -1,0 +1,256 @@
+.app {
+  height: 100dvh;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+.topbar {
+  height: 76px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: max(10px, env(safe-area-inset-top)) 22px 10px;
+  z-index: 4;
+}
+.brand {
+  border: 0;
+  background: transparent;
+  gap: 9px;
+  padding: 0;
+  justify-content: flex-start;
+}
+.brand:hover {
+  background: transparent;
+}
+.brand > svg {
+  width: 35px;
+  height: 35px;
+  color: var(--accent);
+}
+.brand > span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.brand strong {
+  font-size: 23px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+.brand small {
+  font: 7px var(--mono);
+  letter-spacing: 0.17em;
+  color: var(--muted);
+}
+.project-title {
+  min-width: 0;
+  max-width: 300px;
+  padding: 2px 0 2px 22px;
+  gap: 5px;
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-title:hover {
+  background: transparent;
+}
+.project-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  font-size: 12px;
+  text-align: left;
+}
+.project-name > svg {
+  color: var(--muted);
+}
+.project-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.workspace-switch {
+  margin-left: auto;
+}
+.workspace-switch .segmented {
+  width: 212px;
+}
+.workspace-switch button[aria-pressed="true"] svg {
+  color: var(--accent);
+}
+.header-actions,
+.history-actions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.header-actions {
+  gap: 16px;
+}
+.history-actions .icon-button {
+  background: transparent;
+  border-color: transparent;
+  width: 36px;
+}
+.history-actions .icon-button:hover {
+  background: var(--line);
+}
+.export-action {
+  min-height: 38px;
+  padding: 8px 14px;
+  font-size: 12px;
+  border-radius: 7px;
+}
+.editor-layout {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 212px minmax(0, 1fr) 268px;
+  grid-template-areas: "hierarchy workspace inspector";
+  gap: 12px;
+  padding: 0 16px;
+  overflow: clip;
+}
+.workspace {
+  grid-area: workspace;
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  container: workspace / size;
+  overflow: clip;
+  background: var(--canvas);
+  border: 1px solid #e0dcd3;
+  border-radius: 12px;
+}
+.dock-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--surface);
+  z-index: 3;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.hierarchy {
+  grid-area: hierarchy;
+}
+.inspector {
+  grid-area: inspector;
+}
+.panel-heading {
+  height: 54px;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+}
+.panel-heading h2 {
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  color: var(--ink);
+}
+.panel-count {
+  margin-left: auto;
+  font: 10px var(--mono);
+  background: #f3f1eb;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+.panel-scroll {
+  overflow: auto;
+  min-height: 0;
+  flex: 1;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d7d2c9 transparent;
+  scroll-behavior: smooth;
+}
+.inspector-tabs {
+  margin-left: auto;
+  width: 89px;
+  flex: none;
+}
+.inspector-tabs .segmented button {
+  min-height: 25px;
+  padding: 4px 6px;
+  font-size: 10px;
+}
+.inspector-tabs .segmented {
+  border-radius: 6px;
+}
+.editor-status {
+  height: 34px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 22px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.save-state {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.save-state i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.save-state[data-saved="true"] i {
+  background: #8a9972;
+}
+.document-stats,
+.status-settings,
+.status-settings > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.editor-status b {
+  font: 10px var(--mono);
+  color: #68645c;
+}
+.status-settings {
+  margin-left: auto;
+  gap: 20px;
+}
+.view-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease),
+    visibility 0s var(--duration);
+}
+.view-layer[data-active="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition:
+    opacity var(--duration) var(--ease),
+    transform var(--duration) var(--ease),
+    visibility 0s;
+}

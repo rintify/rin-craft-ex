@@ -1,0 +1,344 @@
+.sheet-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 24px 26px;
+}
+.sheet-content section {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.sheet-content h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 11px;
+  margin: 0 0 11px;
+  font-weight: 600;
+}
+.section-unit {
+  font: 9px var(--mono);
+  color: var(--muted);
+  font-weight: 400;
+}
+.sheet-content p {
+  line-height: 1.8;
+  margin: 0;
+}
+.field-note {
+  font-size: 11px;
+  color: var(--muted);
+}
+.inspector .sheet-content {
+  padding: 16px;
+  gap: 18px;
+}
+.object-identity {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+.object-identity > div {
+  min-width: 0;
+  flex: 1;
+}
+.object-badge {
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: var(--accent-soft);
+  width: 37px;
+  height: 41px;
+  border: 1px solid #efdbce;
+  border-radius: 8px;
+  flex: none;
+}
+.object-name {
+  width: 100%;
+  min-height: 26px;
+  padding: 3px 0;
+  background: transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 12px;
+}
+.object-summary {
+  font: 9px var(--mono);
+}
+.inspector .button-row button {
+  font-size: 11px;
+  padding: 8px 6px;
+}
+.inspector .select-trigger {
+  min-width: 90px;
+}
+.operation-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.operation-row .number-field {
+  flex: 1;
+}
+.operation-row button {
+  flex: none;
+  font-size: 11px;
+}
+.object-list {
+  padding: 8px;
+}
+.object-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  margin: 2px 0;
+  gap: 2px;
+  border: 1px solid transparent;
+  transition:
+    background var(--duration),
+    border-color var(--duration),
+    opacity var(--duration);
+}
+.object-row::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity var(--duration);
+}
+.object-row:hover {
+  background: #f6f4ee;
+}
+.object-row.selected {
+  background: var(--accent-soft);
+  border-color: #eeddd1;
+}
+.object-row.selected::before {
+  opacity: 1;
+}
+.object-select {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  font-size: 11px;
+  gap: 9px;
+  min-height: 48px;
+}
+.object-select:hover {
+  background: transparent;
+}
+.object-icon {
+  display: grid;
+  place-items: center;
+  color: #8c897e;
+}
+.object-row.selected .object-icon {
+  color: var(--accent);
+}
+.object-select > span:last-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.object-select small {
+  display: block;
+  margin-top: 5px;
+  font: 9px var(--mono);
+  color: var(--muted);
+}
+.object-select small span {
+  font-size: 8px;
+}
+.object-row .icon-button {
+  width: 30px;
+  min-height: 44px;
+  background: transparent;
+  border: 0;
+  color: #a5a095;
+}
+.object-row .icon-button svg {
+  width: 15px;
+}
+.object-row .icon-button:hover {
+  color: var(--ink);
+}
+.object-row[data-hidden="true"] .object-select {
+  opacity: 0.45;
+}
+.empty-properties,
+.object-list p {
+  margin: 0;
+  padding: 14px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+.menu-list > button,
+.export-pdf {
+  justify-content: flex-start;
+  background: var(--field);
+  border-color: transparent;
+  min-height: 49px;
+  font-size: 12px;
+}
+.menu-list > button > svg,
+.export-pdf svg {
+  color: var(--accent);
+}
+.menu-list > button:hover,
+.export-pdf:hover {
+  background: var(--accent-soft);
+}
+.menu-list .number-field {
+  margin-bottom: 8px;
+}
+.shape-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 24px;
+}
+.shape-grid button {
+  height: 130px;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 12px;
+  background: var(--field);
+}
+.shape-grid button:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: #dfb7a5;
+}
+.shape-glyph {
+  width: 52px;
+  height: 52px;
+  color: #75736a;
+  transition:
+    color var(--duration),
+    transform var(--duration) var(--ease);
+}
+.shape-grid button:hover .shape-glyph {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+.help-content h3 {
+  margin-top: 8px;
+}
+.help-content p {
+  font-size: 12px;
+}
+.drop-zone {
+  border: 1px dashed #c5b8a4;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--field);
+  transition:
+    background var(--duration),
+    border-color var(--duration);
+}
+.drop-zone.dragging {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.import-error {
+  color: #b84736;
+  font-size: 11px;
+}
+.export-progress {
+  height: 0;
+  margin-top: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--line);
+  transition:
+    opacity var(--duration),
+    height var(--duration),
+    margin var(--duration);
+}
+.export-progress[data-building="true"] {
+  height: 3px;
+  margin-top: 10px;
+}
+.export-progress > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  transition: transform var(--duration) var(--ease);
+}
+.download-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+  transition: background var(--duration);
+}
+.download-button:hover {
+  background: #f0d9cc;
+}
+.export-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 2px 0 12px;
+}
+.export-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+.export-summary strong {
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.export-summary > div > span:last-child {
+  color: var(--muted);
+  font: 11px var(--mono);
+}
+.export-sheet {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 66px;
+  border-radius: 4px;
+  border: 1px solid #ddd5c8;
+  color: var(--accent);
+  background: #fff;
+  box-shadow:
+    3px 3px 0 -1px var(--surface),
+    3px 3px 0 0 #e5dfd4;
+  flex: none;
+}
+.export-pdf {
+  width: 100%;
+}
+.export-pdf.primary svg {
+  color: inherit;
+}

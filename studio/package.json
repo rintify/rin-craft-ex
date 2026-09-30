@@ -1,0 +1,35 @@
+{
+  "name": "fold-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "npm run schema && tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "tsx --test tests/*.test.ts",
+    "craft": "tsx scripts/craft.ts",
+    "example:gundam": "tsx scripts/generate-gundam.ts",
+    "schema": "tsx scripts/write-schema.ts",
+    "format": "prettier --write src scripts/*.ts examples tests"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "^0.180.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "^3.9.9",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2",
+    "vite": "^6.4.0"
+  }
+}

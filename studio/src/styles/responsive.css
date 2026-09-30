@@ -1,0 +1,530 @@
+/* Docks remain visible. Only their placement and information density change. */
+@media (max-width: 1150px) and (min-width: 760px) {
+  .editor-layout {
+    grid-template-columns: 170px minmax(0, 1fr) 224px;
+    gap: 8px;
+    padding: 0 10px;
+  }
+  .topbar {
+    height: 66px;
+    gap: 14px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .brand strong {
+    font-size: 20px;
+  }
+  .brand small {
+    font-size: 6px;
+  }
+  .brand > svg {
+    width: 30px;
+  }
+  .project-title {
+    padding-left: 14px;
+    max-width: 180px;
+  }
+  .workspace-switch .segmented {
+    width: 168px;
+  }
+  .mode-long {
+    display: none;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .panel-heading {
+    padding: 0 10px;
+  }
+  .inspector .panel-heading h2 {
+    font-size: 10px;
+  }
+  .inspector .sheet-content {
+    padding: 12px;
+  }
+  .object-list {
+    padding: 5px;
+  }
+  .object-select {
+    padding: 8px 5px;
+    gap: 6px;
+  }
+  .object-row .icon-button {
+    width: 26px;
+  }
+  .status-settings {
+    gap: 12px;
+  }
+}
+@media (max-width: 900px) and (min-width: 760px) {
+  .project-title {
+    max-width: 125px;
+  }
+  .export-action span {
+    display: none;
+  }
+  .export-action {
+    width: 36px;
+    padding: 0;
+  }
+  .editor-layout {
+    grid-template-columns: 154px minmax(0, 1fr) 210px;
+  }
+  .editor-status {
+    padding: 0 14px;
+    gap: 14px;
+  }
+  .status-settings > span:last-child {
+    display: none;
+  }
+}
+@media (max-width: 759px) {
+  .topbar {
+    height: 62px;
+    gap: 9px;
+    padding: max(7px, env(safe-area-inset-top)) 12px 7px;
+  }
+  .brand {
+    gap: 5px;
+  }
+  .brand > svg {
+    width: 27px;
+    height: 29px;
+  }
+  .brand strong {
+    font-size: 17px;
+    letter-spacing: 0.05em;
+  }
+  .brand small {
+    font-size: 5.5px;
+    letter-spacing: 0.09em;
+  }
+  .project-title {
+    display: none;
+  }
+  .workspace-switch {
+    margin-left: auto;
+  }
+  .workspace-switch .segmented {
+    width: 155px;
+  }
+  .mode-long {
+    display: none;
+  }
+  .workspace-switch .segmented button {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+  .header-actions {
+    gap: 7px;
+  }
+  .history-actions {
+    gap: 0;
+  }
+  .history-actions .icon-button {
+    width: 34px;
+    min-height: 40px;
+  }
+  .export-action {
+    width: 36px;
+    min-height: 36px;
+    padding: 0;
+  }
+  .export-action span {
+    display: none;
+  }
+  .editor-layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    grid-template-rows: minmax(0, 1fr) clamp(186px, 35dvh, 292px);
+    grid-template-areas: "workspace workspace" "hierarchy inspector";
+    gap: 8px;
+    padding: 0 10px 10px;
+  }
+  .dock-panel,
+  .workspace {
+    border-radius: 9px;
+  }
+  .panel-heading {
+    height: 39px;
+    min-height: 39px;
+    padding: 0 10px;
+    gap: 5px;
+  }
+  .panel-heading h2,
+  .inspector .panel-heading h2 {
+    font-size: 10px;
+  }
+  .panel-count {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
+  .inspector-tabs {
+    width: 80px;
+  }
+  .inspector-tabs .segmented button {
+    min-height: 24px;
+    padding: 3px 4px;
+    font-size: 10px;
+  }
+  .inspector .sheet-content {
+    padding: 10px;
+    gap: 12px;
+  }
+  .sheet-content section {
+    padding-top: 10px;
+  }
+  .sheet-content h3 {
+    margin-bottom: 8px;
+  }
+  .object-badge {
+    width: 30px;
+    height: 32px;
+    border-radius: 6px;
+  }
+  .object-badge svg {
+    width: 17px;
+  }
+  .object-identity {
+    gap: 7px;
+  }
+  .object-name {
+    font-size: 11px;
+  }
+  .object-summary {
+    font-size: 8px;
+  }
+  .object-list {
+    padding: 4px;
+  }
+  .object-select {
+    font-size: 10px;
+    padding: 7px 5px;
+    gap: 6px;
+    min-height: 43px;
+  }
+  .object-select small {
+    margin-top: 3px;
+  }
+  .object-icon svg {
+    width: 15px;
+  }
+  .object-row .icon-button {
+    width: 27px;
+  }
+  .object-row .icon-button svg {
+    width: 14px;
+  }
+  .editor-status {
+    display: none;
+  }
+  .vector-fields {
+    gap: 4px;
+  }
+  .axis-field .axis-label {
+    left: 6px;
+    font-size: 9px;
+  }
+  .axis-field input {
+    padding-left: 19px;
+    padding-right: 2px;
+    font-size: 11px;
+    min-height: 38px;
+  }
+  .modal-layer {
+    padding: 12px 8px;
+    align-items: flex-end;
+  }
+  .dialog {
+    max-height: 88dvh;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .dialog-heading {
+    padding: 14px 18px;
+  }
+  .sheet-content {
+    padding: 18px;
+  }
+  .select-field {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .shape-grid {
+    padding: 18px;
+  }
+  .shape-grid button {
+    height: 108px;
+  }
+  .shape-glyph {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 430px) {
+  .topbar {
+    height: 56px;
+    gap: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .brand > span {
+    display: none;
+  }
+  .brand {
+    width: 32px;
+  }
+  .workspace-switch {
+    margin-left: 3px;
+  }
+  .workspace-switch .segmented {
+    width: 146px;
+  }
+  .header-actions {
+    margin-left: auto;
+    gap: 5px;
+  }
+  .editor-layout {
+    padding: 0 6px 6px;
+    gap: 6px;
+  }
+  .inspector .panel-heading {
+    padding: 0 6px;
+  }
+  .inspector-tabs {
+    width: 72px;
+  }
+  .panel-heading {
+    padding: 0 7px;
+  }
+  .hierarchy .panel-heading > svg {
+    display: none;
+  }
+  .object-icon {
+    display: none;
+  }
+  .object-badge {
+    display: none;
+  }
+  .object-row .icon-button {
+    width: 25px;
+  }
+  .object-summary {
+    display: none;
+  }
+  .inspector .sheet-content {
+    padding: 9px;
+    gap: 10px;
+  }
+  .object-name {
+    min-height: 28px;
+  }
+  .section-unit {
+    font-size: 8px;
+  }
+}
+@container workspace (max-height: 480px) {
+  .canvas-top {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+  .scene-hint {
+    top: 61px;
+    left: 12px;
+    font-size: 9px;
+  }
+  .orbit-stick {
+    width: 96px;
+    height: 96px;
+    left: 16px;
+    bottom: 72px;
+  }
+  .zoom-stick {
+    height: 74px;
+    right: 20px;
+    bottom: 96px;
+  }
+  .point-actions {
+    bottom: 185px;
+    left: 14px;
+  }
+  .transform-tools {
+    top: 84px;
+    left: 10px;
+    flex-direction: row;
+  }
+  .context-actions {
+    bottom: 11px;
+  }
+  .empty-symbol {
+    display: none;
+  }
+  .empty-scene h1 {
+    font-size: 20px;
+  }
+  .net-pane .zoom-stick {
+    bottom: 139px;
+    height: 64px;
+  }
+}
+@container workspace (max-height: 320px) {
+  .canvas-top {
+    top: 7px;
+    left: 8px;
+    right: 8px;
+  }
+  .scene-hint {
+    top: 56px;
+    left: 10px;
+  }
+  .orbit-stick {
+    width: 82px;
+    height: 82px;
+    bottom: 59px;
+    left: 13px;
+  }
+  .zoom-stick {
+    height: 58px;
+    bottom: 80px;
+    right: 17px;
+  }
+  .point-actions {
+    bottom: 160px;
+    left: 10px;
+  }
+  .point-actions button {
+    min-height: 36px;
+  }
+  .transform-tools {
+    top: 75px;
+    left: 8px;
+    padding: 2px;
+    gap: 1px;
+  }
+  .transform-tools .icon-button {
+    width: 34px;
+    min-height: 34px;
+  }
+  .context-actions {
+    bottom: 7px;
+  }
+  .context-actions button {
+    min-height: 32px;
+  }
+  .net-toolbar {
+    height: 48px;
+    padding: 3px 6px;
+  }
+  .net-progress {
+    top: 46px;
+  }
+  .net-bottom {
+    height: 44px;
+  }
+  .net-legend {
+    padding: 5px;
+    gap: 13px;
+  }
+  .net-pane .zoom-stick {
+    bottom: 111px;
+    height: 54px;
+  }
+  .empty-scene h1 {
+    font-size: 17px;
+  }
+  .empty-scene p {
+    font-size: 10px;
+  }
+}
+@container workspace (max-width: 600px) {
+  .transform-tools {
+    flex-direction: row;
+  }
+}
+@container workspace (max-width: 360px) {
+  .canvas-top > .select-trigger {
+    max-width: 135px;
+  }
+  .canvas-actions {
+    gap: 4px;
+  }
+  .add-shape {
+    padding: 8px 10px;
+  }
+  .net-toolbar > span {
+    font-size: 9px;
+  }
+  .net-toolbar .icon-button {
+    width: 30px;
+  }
+  .net-toolbar > .select-trigger {
+    font-size: 10px;
+    padding: 8px;
+    max-width: 140px;
+  }
+  .net-bottom {
+    gap: 7px;
+  }
+  .page-navigation {
+    gap: 0;
+  }
+}
+@media (max-height: 440px) and (min-width: 640px) {
+  .topbar {
+    height: 48px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .editor-layout {
+    grid-template-columns: 148px minmax(0, 1fr) 202px;
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-areas: "hierarchy workspace inspector";
+    gap: 6px;
+    padding: 0 6px 6px;
+  }
+  .editor-status {
+    display: none;
+  }
+  .panel-heading {
+    height: 36px;
+    min-height: 36px;
+    padding: 0 8px;
+  }
+  .inspector-tabs {
+    width: 74px;
+  }
+  .inspector .sheet-content {
+    padding: 10px;
+    gap: 12px;
+  }
+  .object-badge {
+    display: none;
+  }
+  .dialog {
+    max-height: 94dvh;
+  }
+  .modal-layer {
+    padding: 8px 16px;
+    align-items: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .view-layer,
+  .dialog {
+    transform: none !important;
+  }
+  .presence {
+    translate: none !important;
+  }
+  .panel-scroll {
+    scroll-behavior: auto;
+  }
+}
+/* Keep iOS from zooming the entire canvas when a numeric field gains focus. */
+@media (pointer: coarse) {
+  input,
+  textarea,
+  .axis-field input,
+  .object-name {
+    font-size: 16px;
+  }
+}
